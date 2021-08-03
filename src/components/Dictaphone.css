@@ -1,0 +1,60 @@
+.main-div {
+  position: relative;
+}
+
+.circle1.active,
+.circle2.active {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -35%);
+  border-radius: 100%;
+  background-color: rgb(0, 225, 255);
+  z-index: -1;
+}
+
+.circle1.active {
+  animation: listening1 1s infinite;
+}
+
+.circle2.active {
+  transform: translate(-50%, -20%);
+  animation: listening2 1s infinite;
+}
+
+@keyframes listening1 {
+  from { width: 100px; height: 100px; opacity: 0.8 }
+  to { width: 200px; height: 200px; opacity: 0.0 }
+}
+
+@keyframes listening2 {
+  from { width: 50px; height: 50px; opacity: 0.8 }
+  to { width: 100px; height: 100px; opacity: 0.0 }
+}
+
+.input-field {
+  position: relative;
+  font-size: 1.5rem !important;
+}
+
+.control-btns {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 5px;
+}
+
+.control-btns button {
+  box-shadow: none;
+  padding: 10px 5px;
+  cursor: pointer;
+}
+
+.control-btns button path,
+.control-btns button svg {
+  fill: rgb(104, 121, 129);
+  cursor: pointer;
+}
+
+.control-btns button:focus {
+  box-shadow: none;
+}
